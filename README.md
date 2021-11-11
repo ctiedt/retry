@@ -1,7 +1,7 @@
 # retry
 
 Proof of concept for a Rust [procedural macro](https://doc.rust-lang.org/reference/procedural-macros.html) to rerun a function if it fails. 
-Currently only supports `Result`s, but could be expanded to `Option`s.
+Supports functions returning `Result` or `Option`.
 
 ## Usage
 
