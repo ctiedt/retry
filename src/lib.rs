@@ -69,7 +69,7 @@ pub fn retry(attr: TokenStream, item: TokenStream) -> TokenStream {
             #sig {
                 let mut tries = 0;
                 while tries <= #retries {
-                    if let Ok(v) = #original_fun_ident() {
+                    if let Ok(v) = #original_fun_ident(#(#fn_args),*) {
                         return Ok(v);
                     }
 

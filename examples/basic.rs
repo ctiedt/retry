@@ -19,7 +19,7 @@ fn returns_option() -> Option<u32> {
     None
 }
 
-// Result<T, E> is mapped to Result<T, &'static str>,
+// Result<T, E> is mapped to Result<T, &'static str>
 #[retry(2)]
 fn might_fail() -> Result<u32, &'static str> {
     match unsafe { X } {
